@@ -1,91 +1,106 @@
-# ************************************************************
-# Sequel Pro SQL dump
-# Version 4541
-#
-# http://www.sequelpro.com/
-# https://github.com/sequelpro/sequelpro
-#
-# Host: 127.0.0.1 (MySQL 5.7.11)
-# Database: bwastartup
-# Generation Time: 2020-09-23 13:46:56 +0000
-# ************************************************************
+-- phpMyAdmin SQL Dump
+-- version 4.9.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 29, 2023 at 06:04 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `bwastartup`
+--
 
-# Dump of table campaign_images
-# ------------------------------------------------------------
+-- --------------------------------------------------------
 
-DROP TABLE IF EXISTS `campaign_images`;
-
-CREATE TABLE `campaign_images` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `campaign_id` int(11) DEFAULT NULL,
-  `file_name` varchar(255) DEFAULT NULL,
-  `is_primary` tinyint(4) DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table campaigns
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `campaigns`;
+--
+-- Table structure for table `campaigns`
+--
 
 CREATE TABLE `campaigns` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(11) UNSIGNED NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `short_description` varchar(255) DEFAULT NULL,
-  `description` text,
-  `perks` text,
+  `description` text DEFAULT NULL,
+  `perks` text DEFAULT NULL,
   `backer_count` int(11) DEFAULT NULL,
   `goal_amount` int(11) DEFAULT NULL,
   `current_amount` int(11) DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `campaigns`
+--
 
+INSERT INTO `campaigns` (`id`, `user_id`, `name`, `short_description`, `description`, `perks`, `backer_count`, `goal_amount`, `current_amount`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 15, 'Campaign 1', 'Short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO', 'perks 1, awo 2, rfmrkf 3', 0, 100000000, 0, 'camoign 1', '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
+(2, 15, 'Campaign 2', 'Short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO', 'perks 1,  awo 2, rfmrkf 3', 0, 100000000, 0, 'camoign 2', '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
+(3, 16, 'Campaign 3', 'Short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO', 'perks 1,  awo 2, rfmrkf 3', 0, 100000000, 0, 'camoign 3', '2023-05-25 00:00:00', '2023-05-25 00:00:00');
 
-# Dump of table transactions
-# ------------------------------------------------------------
+-- --------------------------------------------------------
 
-DROP TABLE IF EXISTS `transactions`;
+--
+-- Table structure for table `campaign_images`
+--
+
+CREATE TABLE `campaign_images` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `campaign_id` int(11) DEFAULT NULL,
+  `file_name` varchar(255) DEFAULT NULL,
+  `is_primary` tinyint(4) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `campaign_images`
+--
+
+INSERT INTO `campaign_images` (`id`, `campaign_id`, `file_name`, `is_primary`, `created_at`, `updated_at`) VALUES
+(2, 1, 'campaign-images/satu.jpg', 0, '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
+(3, 1, 'campaign-images/dua.jpg', 1, '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
+(4, 1, 'campaign-images/tiga.jpg', 0, '2023-05-25 00:00:00', '2023-05-25 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions`
+--
 
 CREATE TABLE `transactions` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(11) UNSIGNED NOT NULL,
   `campaign_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
   `code` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 
-
-# Dump of table users
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `users`;
+--
+-- Table structure for table `users`
+--
 
 CREATE TABLE `users` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `occupation` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
@@ -94,16 +109,82 @@ CREATE TABLE `users` (
   `role` varchar(255) DEFAULT NULL,
   `token` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `users`
+--
 
+INSERT INTO `users` (`id`, `name`, `occupation`, `email`, `password_hash`, `avatar_file_name`, `role`, `token`, `created_at`, `updated_at`) VALUES
+(1, 'Pasha', 'programer', 'pasha@gmail.com', 'Agung', 'images/1-Avatar 2.jpg', 'user', '12', '2023-05-19 00:00:00', '2023-05-24 10:48:43'),
+(2, 'agus', 'it developer', 'agus@gmail.com', 'agus', '', 'user', '0', '2023-05-19 00:00:00', '2023-05-19 00:00:00'),
+(4, 'Test Simpan', '', '', '', '', '', NULL, '2023-05-22 08:16:29', '2023-05-22 08:16:29'),
+(6, 'Name dari POSTMAN', 'UI Desaigner', 'email@domain.com', '$2a$04$PXTc80uyLs8XDKqa7Ta7POpJ/qrSh06pJYtkeyKW8NZO8bOUvMMGW', '', 'user', NULL, '2023-05-22 09:18:01', '2023-05-22 09:18:01'),
+(7, 'Nama', 'CEO', 'email@domain.com', '$2a$04$vMT2tDLbZ5LyPx2oU1LJte9SZ//ui6JNcwG23Z2W8yuy7nJwe6AJ6', '', 'user', NULL, '2023-05-22 10:38:26', '2023-05-22 10:38:26'),
+(8, 'Nama', 'CEO', 'email@domain.com', '$2a$04$5jlb9sUkhvlvIvmJjTLQ1OmJKDuuwU5jOL4z/3N.GpsFwMm4KC8XC', '', 'user', NULL, '2023-05-22 10:40:16', '2023-05-22 10:40:16'),
+(15, 'Agung', 'IT Engginerring', 'agung@gmail.com', '$2a$04$3bM42kNJIrF1GUYvMptTs.9G6IevhqjIyc3wEuF33cSkuD32OVyna', 'images/15-Avatar 2.jpg', 'user', NULL, '2023-05-23 08:01:37', '2023-05-24 10:51:21'),
+(16, 'Daniel', 'HRD', 'daniel@gmail.com', '$2a$04$7iRo3swZmf9JyyWYpPY.8u3KCxBhcaGeyc5htE/fggI5dWs/4wQ8i', 'images/16-Avatar 4.jpg', 'user', NULL, '2023-05-23 09:47:17', '2023-05-24 10:52:31'),
+(17, 'jwt', 'akuaku', 'jwt@gmail.com', '$2a$04$CnfeP.EAFt/NwThr0LKBsuofLBMcc7mAymc8phpXVfj5u0SGmQbLW', '', 'user', NULL, '2023-05-24 09:25:40', '2023-05-24 09:25:40'),
+(18, 'jwt', 'akuaku', 'jwt@gmail.com', '$2a$04$33miTWsFoMddgx.t1GgOLuVfAZ25BEPL31ItPH8azasNMGGmspi6G', '', 'user', NULL, '2023-05-24 09:26:06', '2023-05-24 09:26:06');
 
+--
+-- Indexes for dumped tables
+--
 
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+--
+-- Indexes for table `campaigns`
+--
+ALTER TABLE `campaigns`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `campaign_images`
+--
+ALTER TABLE `campaign_images`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `transactions`
+--
+ALTER TABLE `transactions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `campaigns`
+--
+ALTER TABLE `campaigns`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `campaign_images`
+--
+ALTER TABLE `campaign_images`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `transactions`
+--
+ALTER TABLE `transactions`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
