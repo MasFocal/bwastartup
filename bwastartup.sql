@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2023 at 06:04 AM
+-- Generation Time: May 30, 2023 at 04:27 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
@@ -50,7 +50,15 @@ CREATE TABLE `campaigns` (
 INSERT INTO `campaigns` (`id`, `user_id`, `name`, `short_description`, `description`, `perks`, `backer_count`, `goal_amount`, `current_amount`, `slug`, `created_at`, `updated_at`) VALUES
 (1, 15, 'Campaign 1', 'Short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO', 'perks 1, awo 2, rfmrkf 3', 0, 100000000, 0, 'camoign 1', '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
 (2, 15, 'Campaign 2', 'Short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO', 'perks 1,  awo 2, rfmrkf 3', 0, 100000000, 0, 'camoign 2', '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
-(3, 16, 'Campaign 3', 'Short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO', 'perks 1,  awo 2, rfmrkf 3', 0, 100000000, 0, 'camoign 3', '2023-05-25 00:00:00', '2023-05-25 00:00:00');
+(3, 16, 'Campaign 3', 'Short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO', 'perks 1,  awo 2, rfmrkf 3', 0, 100000000, 0, 'camoign 3', '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
+(5, 15, 'Penggalangan Dana Startup', 'short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG', 'Hadiah 1, Hadiah 2, Hadiah 3, Hadiah 4, Hadiah 5', 0, 100000000, 0, 'penggalangan-dana-startup-s-int-15', '2023-05-30 08:36:49', '2023-05-30 08:36:49'),
+(6, 15, 'Penggalangan Dana Startup', 'short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG', 'Hadiah 1, Hadiah 2, Hadiah 3, Hadiah 4, Hadiah 5', 0, 100000000, 0, 'd-string-penggalangan-dana-startup-15', '2023-05-30 08:37:50', '2023-05-30 08:37:50'),
+(7, 16, 'Penggalangan Dana Startup', 'short', 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG', 'Hadiah 1, Hadiah 2, Hadiah 3, Hadiah 4, Hadiah 5', 0, 100000000, 0, 'd-string-penggalangan-dana-startup-16', '2023-05-30 08:38:24', '2023-05-30 08:38:24'),
+(8, 15, 'sebuah campaign keren', 'Singkat sekali ygy', 'Panjang amat sangat', 'Hasil satu, hasil 2, hasil tigas, hasil 4', 0, 10000000, 0, 'd-string-sebuah-campaign-keren-15', '2023-05-30 09:11:05', '2023-05-30 09:11:05'),
+(9, 16, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'd-string-punyaku-16', '2023-05-30 09:12:12', '2023-05-30 09:12:12'),
+(10, 16, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'punyaku-16', '2023-05-30 09:21:26', '2023-05-30 09:21:26'),
+(11, 16, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'punyaku-16', '2023-05-30 09:21:27', '2023-05-30 09:21:27'),
+(12, 15, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'punyaku-15', '2023-05-30 09:22:01', '2023-05-30 09:22:01');
 
 -- --------------------------------------------------------
 
@@ -164,7 +172,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `campaigns`
 --
 ALTER TABLE `campaigns`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `campaign_images`
