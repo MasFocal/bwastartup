@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2023 at 04:27 AM
+-- Generation Time: May 30, 2023 at 06:01 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
@@ -57,8 +57,8 @@ INSERT INTO `campaigns` (`id`, `user_id`, `name`, `short_description`, `descript
 (8, 15, 'sebuah campaign keren', 'Singkat sekali ygy', 'Panjang amat sangat', 'Hasil satu, hasil 2, hasil tigas, hasil 4', 0, 10000000, 0, 'd-string-sebuah-campaign-keren-15', '2023-05-30 09:11:05', '2023-05-30 09:11:05'),
 (9, 16, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'd-string-punyaku-16', '2023-05-30 09:12:12', '2023-05-30 09:12:12'),
 (10, 16, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'punyaku-16', '2023-05-30 09:21:26', '2023-05-30 09:21:26'),
-(11, 16, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'punyaku-16', '2023-05-30 09:21:27', '2023-05-30 09:21:27'),
-(12, 15, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'punyaku-15', '2023-05-30 09:22:01', '2023-05-30 09:22:01');
+(11, 16, 'Punyaku UPTADE 1', 'Singkat ygy UPTADE', 'Panjang sangat sekali UPTADE', 'Hasil dua, hasil 2, hasil empat UPTADE, hasil 4 UPTADE', 0, 1750000, 0, 'punyaku-16', '2023-05-30 09:21:27', '2023-05-30 10:48:21'),
+(12, 15, 'Punyaku UPTADE oqoqoqoq', 'Singkat ygy UPTADE', 'Panjang sangat sekali UPTADE', 'Hasil dua, hasil 2, hasil empat UPTADE, hasil 4 UPTADE', 0, 1750000, 0, 'punyaku-15', '2023-05-30 09:22:01', '2023-05-30 10:56:24');
 
 -- --------------------------------------------------------
 
