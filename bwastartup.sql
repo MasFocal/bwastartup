@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2023 at 06:01 AM
+-- Generation Time: May 31, 2023 at 05:22 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
@@ -58,7 +58,7 @@ INSERT INTO `campaigns` (`id`, `user_id`, `name`, `short_description`, `descript
 (9, 16, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'd-string-punyaku-16', '2023-05-30 09:12:12', '2023-05-30 09:12:12'),
 (10, 16, 'Punyaku', 'Singkat ygy', 'Panjang sangat sekali', 'Hasil dua, hasil 2, hasil empat, hasil 4', 0, 1000000, 0, 'punyaku-16', '2023-05-30 09:21:26', '2023-05-30 09:21:26'),
 (11, 16, 'Punyaku UPTADE 1', 'Singkat ygy UPTADE', 'Panjang sangat sekali UPTADE', 'Hasil dua, hasil 2, hasil empat UPTADE, hasil 4 UPTADE', 0, 1750000, 0, 'punyaku-16', '2023-05-30 09:21:27', '2023-05-30 10:48:21'),
-(12, 15, 'Punyaku UPTADE oqoqoqoq', 'Singkat ygy UPTADE', 'Panjang sangat sekali UPTADE', 'Hasil dua, hasil 2, hasil empat UPTADE, hasil 4 UPTADE', 0, 1750000, 0, 'punyaku-15', '2023-05-30 09:22:01', '2023-05-30 10:56:24');
+(12, 15, 'Punyaku UPTADE oqoqoqoq', 'Singkat ygy UPTADE', 'Panjang sangat sekali UPTADE', 'Hasil dua, hasil 2, hasil empat UPTADE, hasil 4 UPTADE', 0, 1750000, 0, 'punyaku-15', '2023-05-30 09:22:01', '2023-05-31 09:35:15');
 
 -- --------------------------------------------------------
 
@@ -80,9 +80,30 @@ CREATE TABLE `campaign_images` (
 --
 
 INSERT INTO `campaign_images` (`id`, `campaign_id`, `file_name`, `is_primary`, `created_at`, `updated_at`) VALUES
-(2, 1, 'campaign-images/satu.jpg', 0, '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
-(3, 1, 'campaign-images/dua.jpg', 1, '2023-05-25 00:00:00', '2023-05-25 00:00:00'),
-(4, 1, 'campaign-images/tiga.jpg', 0, '2023-05-25 00:00:00', '2023-05-25 00:00:00');
+(2, 1, 'campaign-images/satu.jpg', 0, '2023-05-25 00:00:00', '2023-05-31 10:20:37'),
+(3, 1, 'campaign-images/dua.jpg', 0, '2023-05-25 00:00:00', '2023-05-31 10:20:37'),
+(4, 1, 'campaign-images/tiga.jpg', 0, '2023-05-25 00:00:00', '2023-05-31 10:20:37'),
+(5, 1, 'images/15-BWA.PNG', 0, '2023-05-31 09:56:52', '2023-05-31 10:20:37'),
+(6, 1, 'images/15-BWA.PNG', 0, '2023-05-31 09:57:53', '2023-05-31 10:20:37'),
+(7, 1, 'images/15-BWA.PNG', 0, '2023-05-31 09:58:06', '2023-05-31 10:20:37'),
+(8, 1, 'images/16-BWA.PNG', 0, '2023-05-31 09:59:11', '2023-05-31 10:20:37'),
+(9, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:01:47', '2023-05-31 10:20:37'),
+(10, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:04:58', '2023-05-31 10:20:37'),
+(11, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:04:59', '2023-05-31 10:20:37'),
+(12, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:07:14', '2023-05-31 10:20:37'),
+(13, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:09:57', '2023-05-31 10:20:37'),
+(14, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:10:21', '2023-05-31 10:20:37'),
+(15, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:10:22', '2023-05-31 10:20:37'),
+(16, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:10:36', '2023-05-31 10:20:37'),
+(17, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:10:48', '2023-05-31 10:20:37'),
+(18, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:11:05', '2023-05-31 10:20:37'),
+(19, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:11:32', '2023-05-31 10:20:37'),
+(20, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:11:47', '2023-05-31 10:20:37'),
+(21, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:12:02', '2023-05-31 10:20:37'),
+(22, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:12:22', '2023-05-31 10:20:37'),
+(23, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:12:38', '2023-05-31 10:20:37'),
+(24, 1, 'images/16-BWA.PNG', 0, '2023-05-31 10:12:49', '2023-05-31 10:20:37'),
+(25, 1, 'images/15-3 TVRI.PNG', 1, '2023-05-31 10:20:37', '2023-05-31 10:20:37');
 
 -- --------------------------------------------------------
 
@@ -178,7 +199,7 @@ ALTER TABLE `campaigns`
 -- AUTO_INCREMENT for table `campaign_images`
 --
 ALTER TABLE `campaign_images`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `transactions`
